@@ -3,6 +3,23 @@ import * as map from './modules/map.js';
 
 renderHeader();
 
+//this didn't work
+// document.addEventListener('DOMContentLoaded', () => {
+// const itineraryLinks = document.querySelectorAll(".itinerary-detail-link");
+
+// for (let i = 0 ; i < itineraryLinks.length ; i++) {
+//     itineraryLinks[i].addEventListener("click", async function(event) {
+//     event.preventDefault(); 
+//     const id = new URLSearchParams(window.location.search).get('id');
+//     console.log('Clicked itinerary link with ID:', id);
+//     await displayItineraryInfo(id);
+//     });
+// }
+// });
+
+
+
+// this worked, not displaying the correct itinerary info
 const id = new URLSearchParams(window.location.search).get('id');
 console.log('Clicked itinerary link with ID:', id);
 await displayItineraryInfo(id);
@@ -29,4 +46,3 @@ console.log("Itinerary page loaded");
 
 
 
-map.initMap({ lat: 61.2181, lng: -149.9003 });
